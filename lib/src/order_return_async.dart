@@ -11,6 +11,7 @@ class OrderReturnAsync<T> {
   Future<T> call() async {
     await Future.delayed(
         Duration(milliseconds: (second * Duration.millisecondsPerSecond).round()));
+    print(DateTime.now());
     if (_iterator.moveNext()) {
       _last = _iterator.current;
 
