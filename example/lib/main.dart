@@ -1,25 +1,22 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:mockito/mockito.dart';
 import 'package:mockito_ext/mockito_ext.dart';
-import 'package:mockito_ext/mockito_ext.dart';
-void main() => runApp(MyApp());
 
+void main() => runApp(MyApp());
 class A {
-  int getNum(){
+  int getNum() {
     return 1;
   }
 }
 
-class FakeA extends Fake implements A{
-
+class FakeA extends Fake implements A {
   @override
-  int getNum(){
+  int getNum() {
     return 2;
   }
 }
 
-class MockA extends Mock implements A{}
+class MockA extends Mock implements A {}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -68,19 +65,14 @@ class _MyHomePageState extends State<MyHomePage> {
   MockA _mockA;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
     _mockA = MockA();
 
-    when(_mockA.getNum()).thenReturn(3);
+    mockOrderReturn0(_mockA.getNum, [1, 2, 3]);
   }
-
   void _incrementCounter() {
     setState(() {
-
-
-//      _counter += FakeA().getNum();
-
       _counter += _mockA.getNum();
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
