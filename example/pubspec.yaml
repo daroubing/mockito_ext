@@ -11,6 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  mockito_ext:
+    path: ../
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,7 +1,5 @@
-library mockito_ext;
+export 'package:mockito_ext/src/order_return.dart';
+export 'package:mockito_ext/src/util/order_return_util.dart';
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:mockito_ext/src/order_return_async.dart';
+export 'package:mockito_ext/src/util/order_return_async_util.dart';
