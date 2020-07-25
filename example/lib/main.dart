@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mockito_ext/mockito_ext.dart';
+import 'package:mockito_ext/mockito_ext.dart';
 void main() => runApp(MyApp());
 
 class A {
