@@ -16,7 +16,7 @@ void main() {
     test('使用Wrap', () {
       final mockA = MockA();
 
-      mockCall0(mockA.getNum, [1, 2, 4]);
+      mockOrderReturn0(mockA.getNum, [1, 2, 4]);
 
       expect(mockA.getNum(), 1);
       expect(mockA.getNum(), 2);

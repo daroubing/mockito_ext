@@ -19,7 +19,7 @@ void main() {
     test('使用Http', () {
       final mockA = MockHttpCall();
 
-      mockCallAsync0(mockA.request, [1, 2, 4], delaySecond: 1);
+      mockOrderReturnAsync0(mockA.request, [1, 2, 4], delaySecond: 1);
 
       //NOTE Kun 2020/7/25 是并发调用,所以1秒多就完成了
       expect(mockA.request(), completion(equals(1)));
