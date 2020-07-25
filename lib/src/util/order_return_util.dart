@@ -1,6 +1,6 @@
-import 'package:mockito_ext/src/util/func_tuil.dart';
 import 'package:mockito_ext/src/order_return.dart';
 import 'package:mockito/mockito.dart';
+import 'package:mockito_ext/src/util/func_def.dart';
 
 void mockCall0<R>(Func0<R> call, List<R> data) {
   final order = OrderReturn<R>(data: data);

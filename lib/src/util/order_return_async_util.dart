@@ -1,6 +1,6 @@
 import 'package:mockito_ext/src/order_return_async.dart';
-import 'package:mockito_ext/src/util/func_tuil.dart';
 import 'package:mockito/mockito.dart';
+import 'package:mockito_ext/src/util/func_def.dart';
 
 void mockCallAsync0<R>(Func0<Future<R>> call, List<R> data, {double delaySecond = 0.1}) {
   final order = OrderReturnAsync<R>(data: data, second: delaySecond);
